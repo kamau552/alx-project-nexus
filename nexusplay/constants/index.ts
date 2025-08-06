@@ -1,5 +1,6 @@
 import { Game } from "@/interfaces";
 
+
 export const games: Game[] = [
   {
     id: "far-cry-6",
@@ -7,11 +8,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS5", "Xbox"],
     price: 59.99,
     image: "/assets/images/games/far-cry-6.jpg",
-    genres: ["Action", "Shooter"],
+    category: ["Action", "Shooter"],
     systemRequirements: "Windows 10, 8GB RAM, GTX 960",
     available: ["Worldwide"],
     status: "available",
-    description: "A guerrilla revolution erupts on the tropical island of Yara. Fight to free your people in this explosive shooter."
+    description: "A guerrilla revolution erupts on the tropical island of Yara. Fight to free your people in this explosive shooter.",
+    rating: 3.6
   },
   {
     id: "god-of-war",
@@ -19,11 +21,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS5"],
     price: 49.99,
     image: "/assets/images/games/god-of-war.jpg",
-    genres: ["Action"],
+    category: ["Action"],
     systemRequirements: "Windows 10, 8GB RAM, GTX 1060",
     available: ["Worldwide"],
     status: "available",
-    description: "Kratos and Atreus embark on a mythical Norse journey to uncover deep truths and face powerful gods."
+    description: "Kratos and Atreus embark on a mythical Norse journey to uncover deep truths and face powerful gods.",
+    rating: 4.8
   },
   {
     id: "spider-man",
@@ -31,11 +34,12 @@ export const games: Game[] = [
     platforms: ["PS5", "PC"],
     price: 59.99,
     image: "/assets/images/games/spider-man.jpg",
-    genres: ["Action"],
+    category: ["Action"],
     systemRequirements: "Windows 10, 16GB RAM, RTX 2060",
     available: ["Worldwide"],
     status: "available",
-    description: "Swing through New York as Spider-Man and battle iconic villains in an action-packed open world."
+    description: "Swing through New York as Spider-Man and battle iconic villains in an action-packed open world.",
+    rating: 4.7
   },
   {
     id: "inzoi",
@@ -43,11 +47,12 @@ export const games: Game[] = [
     platforms: ["PC"],
     price: 29.99,
     image: "/assets/images/games/inzoi.jpg",
-    genres: ["Simulation", "RPG"],
+    category: ["Simulation", "RPG"],
     systemRequirements: "Windows 10, 8GB RAM, GTX 1050 Ti",
     available: ["Worldwide"],
     status: "coming_soon",
-    description: "A life simulation game where you shape your own virtual reality, emotions, and relationships."
+    description: "A life simulation game where you shape your own virtual reality, emotions, and relationships.",
+    rating: 4.1
   },
   {
     id: "rdr2",
@@ -55,11 +60,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS5", "Xbox"],
     price: 69.99,
     image: "/assets/images/games/red-dead-redemption.jpg",
-    genres: ["Action", "Adventure", "RPG"],
+    category: ["Action", "Adventure", "RPG"],
     systemRequirements: "Windows 10, 12GB RAM, GTX 1060",
     available: ["Worldwide"],
     status: "available",
-    description: "Step into the wild west as Arthur Morgan, surviving against the decline of the outlaw era in a vast and gritty world."
+    description: "Step into the wild west as Arthur Morgan, surviving against the decline of the outlaw era in a vast and gritty world.",
+    rating: 4.8
   },
   {
     id: "elden-ring",
@@ -67,11 +73,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS5", "Xbox"],
     price: 69.99,
     image: "/assets/images/games/elden-ring.jpg",
-    genres: ["RPG", "Adventure"],
+    category: ["RPG", "Adventure"],
     systemRequirements: "Windows 10, 16GB RAM, GTX 1070",
     available: ["Worldwide"],
     status: "available",
-    description: "A dark fantasy action RPG where players traverse a vast world guided by grace to become the Elden Lord."
+    description: "A dark fantasy action RPG where players traverse a vast world guided by grace to become the Elden Lord.",
+    rating: 4.3
   },
   {
     id: "horizon-zero-dawn",
@@ -79,11 +86,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS4"],
     price: 49.99,
     image: "/assets/images/games/horizon-zero-dawn.jpg",
-    genres: ["Adventure", "Action"],
+    category: ["Adventure", "Action"],
     systemRequirements: "Windows 10, 8GB RAM, GTX 1050 Ti",
     available: ["Worldwide"],
     status: "available",
-    description: "Aloy’s journey through a post-apocalyptic world ruled by robotic creatures reveals her destiny and the truth of the old world."
+    description: "Aloy’s journey through a post-apocalyptic world ruled by robotic creatures reveals her destiny and the truth of the old world.",
+    rating: 4.7
   },
   {
     id: "xcom-2",
@@ -91,11 +99,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS4", "Xbox"],
     price: 49.99,
     image: "/assets/images/games/xcom-2.jpg",
-    genres: ["Strategy"],
+    category: ["Strategy"],
     systemRequirements: "Windows 7, 4GB RAM, GTX 460",
     available: ["Worldwide"],
     status: "available",
-    description: "Lead the resistance against an alien occupation in this intense turn-based strategy game."
+    description: "Lead the resistance against an alien occupation in this intense turn-based strategy game.",
+    rating: 4.5
   },
   {
     id: "starfield",
@@ -103,11 +112,12 @@ export const games: Game[] = [
     platforms: ["PC", "Xbox"],
     price: 69.99,
     image: "/assets/images/games/starfield.jpg",
-    genres: ["RPG", "Adventure"],
+    category: ["RPG", "Adventure"],
     systemRequirements: "Windows 10, 16GB RAM, RTX 2070",
     available: ["Worldwide"],
     status: "available",
-    description: "Explore space and uncover humanity's greatest mystery in this next-gen RPG from the creators of Skyrim."
+    description: "Explore space and uncover humanity's greatest mystery in this next-gen RPG from the creators of Skyrim.",
+    rating: 3.1
   },
   {
     id: "gta-v",
@@ -115,11 +125,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS4", "Xbox"],
     price: 29.99,
     image: "/assets/images/games/gta-v.jpg",
-    genres: ["Action", "Adventure"],
+    category: ["Action", "Adventure"],
     systemRequirements: "Windows 10, 8GB RAM, GTX 660",
     available: ["Worldwide"],
     status: "available",
-    description: "Experience life in the crime-filled streets of Los Santos through three iconic characters in a vast open world."
+    description: "Experience life in the crime-filled streets of Los Santos through three iconic characters in a vast open world.",
+    rating: 4.4
   },
   {
     id: "outlast",
@@ -127,11 +138,12 @@ export const games: Game[] = [
     platforms: ["PC", "PS4"],
     price: 19.99,
     image: "/assets/images/games/outlast.jpg",
-    genres: ["Horror", "Shooter", "Action"],
+    category: ["Horror", "Shooter", "Action"],
     systemRequirements: "Windows 7, 4GB RAM, GTX 260",
     available: ["Worldwide"],
     status: "available",
-    description: "A terrifying survival horror game where you must escape a haunted asylum with only your camera."
+    description: "A terrifying survival horror game where you must escape a haunted asylum with only your camera.",
+    rating: 4.5
   },
   {
   id: "assassins-creed-valhalla",
@@ -139,11 +151,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS5", "Xbox"],
   price: 59.99,
   image: "/assets/images/games/assassins-creed-valhalla.jpg",
-  genres: ["RPG", "Action"],
+  category: ["RPG", "Action"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 960",
   available: ["Worldwide"],
   status: "available",
-  description: "Become Eivor, a legendary Viking raider, and lead your clan in battles across England's Dark Ages."
+  description: "Become Eivor, a legendary Viking raider, and lead your clan in battles across England's Dark Ages.",
+  rating: 3.6
 },
 {
   id: "detroit-become-human",
@@ -151,11 +164,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS4"],
   price: 39.99,
   image: "/assets/images/games/detroit-become-human.jpg",
-  genres: ["Adventure"],
+  category: ["Adventure"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 780",
   available: ["Worldwide"],
   status: "available",
-  description: "Experience a gripping narrative set in a futuristic Detroit where androids face moral dilemmas."
+  description: "Experience a gripping narrative set in a futuristic Detroit where androids face moral dilemmas.",
+  rating: 4.9
 },
 {
   id: "little-nightmares",
@@ -163,11 +177,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS4", "Switch"],
   price: 24.99,
   image: "/assets/images/games/little-nightmares.jpg",
-  genres: ["Horror", "Indie", "Adventure"],
+  category: ["Horror", "Indie", "Adventure"],
   systemRequirements: "Windows 10, 4GB RAM, GTX 660",
   available: ["Worldwide"],
   status: "available",
-  description: "Immerse yourself in a dark whimsical tale of childhood fears inside a mysterious vessel called The Maw."
+  description: "Immerse yourself in a dark whimsical tale of childhood fears inside a mysterious vessel called The Maw.",
+  rating: 4.5
 },
 {
   id: "resident-evil",
@@ -175,11 +190,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS4"],
   price: 39.99,
   image: "/assets/images/games/resident-evil.jpg",
-  genres: ["Horror", "Adventure"],
+  category: ["Horror", "Adventure"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 960",
   available: ["Worldwide"],
   status: "available",
-  description: "Survive a zombie-infested world as you uncover disturbing secrets behind bioterrorism."
+  description: "Survive a zombie-infested world as you uncover disturbing secrets behind bioterrorism.",
+  rating: 4.6
 },
 {
   id: "witcher-3",
@@ -187,11 +203,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS5", "Xbox"],
   price: 39.99,
   image: "/assets/images/games/witcher-3.jpg",
-  genres: ["RPG", "Adventure"],
+  category: ["RPG", "Adventure"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 770",
   available: ["Worldwide"],
   status: "available",
-  description: "Play as Geralt of Rivia in a vast open world filled with monsters, magic, and political intrigue."
+  description: "Play as Geralt of Rivia in a vast open world filled with monsters, magic, and political intrigue.",
+  rating: 4.7
 },
 {
   id: "league-of-legends",
@@ -199,11 +216,12 @@ export const games: Game[] = [
   platforms: ["PC"],
   price: 0.00,
   image: "/assets/images/games/league-of-legends.jpg",
-  genres: ["Strategy", "Multiplayer"],
+  category: ["Strategy", "Multiplayer"],
   systemRequirements: "Windows 7, 4GB RAM, Intel HD Graphics 3000",
   available: ["Worldwide"],
   status: "available",
-  description: "Compete in 5v5 multiplayer battles using unique champions with tactical abilities and strategies."
+  description: "Compete in 5v5 multiplayer battles using unique champions with tactical abilities and strategies.",
+  rating: 3.7
 },
 {
   id: "call-of-duty",
@@ -211,11 +229,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS5", "Xbox"],
   price: 59.99,
   image: "/assets/images/games/call-of-duty.jpg",
-  genres: ["Shooter", "Action"],
+  category: ["Shooter", "Action"],
   systemRequirements: "Windows 10, 12GB RAM, GTX 970",
   available: ["Worldwide"],
   status: "available",
-  description: "Jump into cinematic military campaigns and fast-paced multiplayer gunfights in this iconic series."
+  description: "Jump into cinematic military campaigns and fast-paced multiplayer gunfights in this iconic series.",
+  rating: 4.0
 },
 {
   id: "stalker",
@@ -223,11 +242,12 @@ export const games: Game[] = [
   platforms: ["PC"],
   price: 29.99,
   image: "/assets/images/games/stalker.jpg",
-  genres: ["RPG", "Horror", "Shooter"],
+  category: ["RPG", "Horror", "Shooter"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 760",
   available: ["Worldwide"],
   status: "available",
-  description: "Navigate through the post-apocalyptic Chernobyl Exclusion Zone full of radiation and mutated horrors."
+  description: "Navigate through the post-apocalyptic Chernobyl Exclusion Zone full of radiation and mutated horrors.",
+  rating: 4.2
 },
 {
   id: "bully",
@@ -235,11 +255,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS4"],
   price: 19.99,
   image: "/assets/images/games/bully.jpg",
-  genres: ["Simulation", "Adventure"],
+  category: ["Simulation", "Adventure"],
   systemRequirements: "Windows 10, 4GB RAM, Intel HD Graphics",
   available: ["Worldwide"],
   status: "available",
-  description: "Play as a mischievous student at Bullworth Academy, surviving school life with humor and rebellion."
+  description: "Play as a mischievous student at Bullworth Academy, surviving school life with humor and rebellion.",
+  rating: 4.6
 },
 {
   id: "sims-4",
@@ -247,11 +268,12 @@ export const games: Game[] = [
   platforms: ["PC"],
   price: 0.00,
   image: "/assets/images/games/sims-4.jpg",
-  genres: ["Simulation"],
+  category: ["Simulation"],
   systemRequirements: "Windows 10, 4GB RAM, GTX 650",
   available: ["Worldwide"],
   status: "available",
-  description: "Build homes, create Sims, and control their lives in this beloved life simulation game."
+  description: "Build homes, create Sims, and control their lives in this beloved life simulation game.",
+  rating: 3.9
 },
 {
   id: "peak",
@@ -259,11 +281,12 @@ export const games: Game[] = [
   platforms: ["Mobile", "PC"],
   price: 0.00,
   image: "/assets/images/games/peak.jpg",
-  genres: ["Simulation", "Strategy"],
+  category: ["Simulation", "Strategy"],
   systemRequirements: "N/A",
   available: ["Worldwide"],
   status: "available",
-  description: "Train your brain daily with fun games designed to challenge memory, focus, and problem-solving."
+  description: "Train your brain daily with fun games designed to challenge memory, focus, and problem-solving.",
+  rating: 4.5
 },
 {
   id: "nba-2k24",
@@ -271,11 +294,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS5", "Xbox"],
   price: 69.99,
   image: "/assets/images/games/nba-2k24.jpg",
-  genres: ["Sports"],
+  category: ["Sports"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 770",
   available: ["Worldwide"],
   status: "available",
-  description: "Hit the court with realistic gameplay, updated rosters, and thrilling MyCareer and franchise modes."
+  description: "Hit the court with realistic gameplay, updated rosters, and thrilling MyCareer and franchise modes.",
+  rating: 2.0
 },
 {
   id: "fifa-24",
@@ -283,11 +307,12 @@ export const games: Game[] = [
   platforms: ["PC", "PS5", "Xbox"],
   price: 69.99,
   image: "/assets/images/games/fifa-24.jpg",
-  genres: ["Sports"],
+  category: ["Sports"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 960",
   available: ["Worldwide"],
   status: "available",
-  description: "Experience world-class football with hyper-realistic graphics and exciting modes like Ultimate Team."
+  description: "Experience world-class football with hyper-realistic graphics and exciting modes like Ultimate Team.",
+  rating: 4.6
 },
 {
   id: "forza-horizon-5",
@@ -295,11 +320,12 @@ export const games: Game[] = [
   platforms: ["PC", "Xbox"],
   price: 59.99,
   image: "/assets/images/games/forza-horizon-5.jpg",
-  genres: ["Racing", "Simulation"],
+  category: ["Racing", "Simulation"],
   systemRequirements: "Windows 10, 8GB RAM, GTX 970",
   available: ["Worldwide"],
   status: "available",
-  description: "Drive across vibrant Mexico in dynamic seasons with hundreds of the world's greatest cars."
+  description: "Drive across vibrant Mexico in dynamic seasons with hundreds of the world's greatest cars.",
+  rating: 4.2
 },
 {
   id: "stardew-valley",
@@ -307,12 +333,25 @@ export const games: Game[] = [
   platforms: ["PC", "Switch", "Mobile"],
   price: 14.99,
   image: "/assets/images/games/stardew-valley.jpg",
-  genres: ["Indie", "Simulation", "Strategy"],
+  category: ["Indie", "Simulation", "Strategy"],
   systemRequirements: "Windows Vista, 2GB RAM, 256MB VRAM",
   available: ["Worldwide"],
   status: "available",
-  description: "Escape to the countryside and cultivate your dream farm in this charming farming and life sim."
+  description: "Escape to the countryside and cultivate your dream farm in this charming farming and life sim.",
+  rating: 4.0
 }
+];
+
+export const categoriesList = [
+  "All",
+  "Action",
+  "Adventure",
+  "RPG",
+  "Shooter",
+  "Strategy and Simulation",
+  "Sports",
+  "Indie",
+  "Horror"
 ];
 
 export const footerLinks = [
