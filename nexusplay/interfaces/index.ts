@@ -4,29 +4,64 @@ export type Slide = {
   alt: string;
 };
 
+export interface FiltersProps {
+  selectedCategory: string;
+  onCategoryChange: (category: string) => void;
+}
+
+export interface GameGridProps {
+  games: Game[];
+}
+
 
 export interface GameCardProps {
   id: string;
   name: string;
   rating: number;
   price: number;
-  image: {
-    src: string;
-    alt: string;
-  };
+  image: string;
+};
+
+export interface systemRequirements {
+  os?: string;
+  processor?: string;
+  memory?: string;
+  graphics?: string;
+  storage?: string;
+  [key: string]: string | undefined;
 }
 
-
 export type Game = {
-  rating: number;
+  releaseDate: string;
+  developer: string;
+  publisher: string;
   id: string;
   title: string;
-  platforms: string[];
+  rating: number;
   price: number;
   image: string;
+  platforms: string[];
   category: string[];
-  systemRequirements: string;
+    systemRequirements: string | systemRequirements;
   available: string[];
-  status: 'available' | 'reserved' | 'sold-out' | 'coming_soon';
+  status: "available" | "reserved" | "sold-out" | "coming_soon";
   description: string;
+  releaseInfo: {
+    developer: string;
+    releaseDate: string; 
+    publisher: string;
+  };
 };
+
+export interface CartGame {
+  id: string;
+  title: string;
+  price: number;
+  image: string;
+  quantity?: number;
+}
+
+export interface CheckoutProps {
+  games: CartGame[];
+}
+

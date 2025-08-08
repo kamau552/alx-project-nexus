@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Image from 'next/image';
 import { FaGoogle, FaXbox } from "react-icons/fa";
 import Link from 'next/link';
@@ -6,9 +5,6 @@ import Link from 'next/link';
 
 
 export default function signup() {
-  const handleEdit = () => {
-    alert('google signin clicked!');
-  };
 
   return (
     <>

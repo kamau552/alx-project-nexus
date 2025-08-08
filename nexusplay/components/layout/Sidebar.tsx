@@ -10,8 +10,9 @@ import { FiMenu, FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import ThemeToggle from "../common/ThemeToggle";
 
+
 const menuItems = [
-  { name: "Home", icon: <RiHome5Line size={20} />, path: "/home" },
+  { name: "Home", icon: <RiHome5Line size={20} />, path: "/" },
   { name: "Categories", icon: <FaThLarge size={20} />, path: "/categories" },
   { name: "Library", icon: <VscLibrary size={20} />, path: "/library" },
   { name: "Cart", icon: <FaCartPlus size={20} />, path: "/cart" },
@@ -59,7 +60,7 @@ export default function Sidebar({ onToggle, isOpen }: { onToggle: () => void; is
               height={40}
             />
           </div>
-          <button onClick={onToggle} className="text-black">
+          <button onClick={onToggle} className="text-black font-semibold">
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
@@ -131,7 +132,7 @@ export default function Sidebar({ onToggle, isOpen }: { onToggle: () => void; is
                     ${isOpen ? "justify-start" : "justify-center"}
                     ${
                       isActive
-                        ? "bg-gray-300 text-blue-600"
+                        ? "bg-gray-300 text-indigo-600"
                         : "hover:bg-gray-300 text-black"
                     }
                   `}

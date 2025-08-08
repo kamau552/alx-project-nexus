@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import Searchbar from '../common/searchbar';
-import { usePathname } from 'next/navigation';
+
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const pathname = usePathname();
+
 
   useEffect(() => {
     setMounted(true);
@@ -51,7 +50,6 @@ export default function Layout({ children }: LayoutProps) {
       <Sidebar 
         onToggle={toggleSidebar} 
         isOpen={isSidebarOpen} 
-        isMobile={isMobile} 
       />
       
       {/* Mobile Overlay */}

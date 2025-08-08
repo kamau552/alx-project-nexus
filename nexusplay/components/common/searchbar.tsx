@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiSearch, FiX } from "react-icons/fi";
 import { useRouter } from 'next/navigation';
 
@@ -54,7 +54,7 @@ const Searchbar = (props: searchBarProps) => {
 
     return (
         <div className="relative flex justify-start items-center ml-0 lg:mx-12 mb-6">
-            {/* Search input - always visible on desktop, conditionally on mobile */}
+            {/* Search input  */}
             <div className={`${isMobile ? (isMobileSearchOpen ? 'block' : 'hidden') : 'block'} relative w-full md:w-[400px] lg:w-[500px] ml-2`}>
                 <input
                     type="search"

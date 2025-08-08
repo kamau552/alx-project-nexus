@@ -2,8 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { FaMoon } from 'react-icons/fa';
-import { BsSunFill } from 'react-icons/bs';
+
 
 export default function ThemeToggle() {
     const [darkMode, setDarkMode] = useState(false);

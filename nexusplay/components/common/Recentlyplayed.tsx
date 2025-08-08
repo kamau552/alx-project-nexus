@@ -1,13 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-interface recentlyPlayedprops {
-    id: number;
-    src: string;
-    alt: string; 
-    title: string;
-    time: string;
-}
 
 const recentlyPlayed = [
   { 
