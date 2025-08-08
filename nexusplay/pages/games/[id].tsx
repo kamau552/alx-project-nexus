@@ -207,3 +207,21 @@ export default function GameDetailPage() {
     </div>
   );
 }
+
+
+// Pre-generate all game pages at build time
+export async function getStaticPaths() {
+  return {
+    paths: games.map((game) => ({
+      params: { id: game.id }
+    })),
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const game = games.find((g) => g.id === params.id) || null;
+  return {
+    props: { game }
+  };
+}
