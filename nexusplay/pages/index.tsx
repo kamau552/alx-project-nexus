@@ -5,7 +5,7 @@ import Searchbar from "@/components/common/searchbar";
 import { HiOutlineInbox } from "react-icons/hi2";
 import { IoNotificationsOutline } from "react-icons/io5";
 import Carousel from "@/components/common/carousel";
-import Recentlyplayed from "@/components/common/recentlyplayed";
+import Recentlyplayed from "../components/common/Recentlyplayed";
 import Gamegrid from "@/components/common/Gamegrid";
 import Filters from "@/components/common/filters";
 
