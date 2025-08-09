@@ -1,59 +1,58 @@
-import React from 'react';
-import { useState } from 'react';
-import { games as importedGames } from '@/constants';
-import Searchbar from  "@/components/common/searchbar";
+import React from "react";
+import { useState } from "react";
+import { games as importedGames } from "@/constants";
+import Searchbar from "@/components/common/searchbar";
 import { HiOutlineInbox } from "react-icons/hi2";
 import { IoNotificationsOutline } from "react-icons/io5";
-import Carousel from '@/components/common/carousel';
-import Recentlyplayed from '@/components/common/Recentlyplayed';
-import Gamegrid from '@/components/common/Gamegrid';
-import Filters from '@/components/common/filters';
+import Carousel from "@/components/common/carousel";
+import Recentlyplayed from "@/components/common/recentlyplayed";
+import Gamegrid from "@/components/common/gamegrid";
+import Filters from "@/components/common/filters";
 
 export default function Home() {
   const [searchValue, setSearchValue] = React.useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const handleSearch = (value: string) => {
     console.log(value);
     setSearchValue(value);
-  }
+  };
 
-   // Filter games by category
-  const filteredGames = selectedCategory === 'All' 
-    ? importedGames 
-    : importedGames.filter(game => 
-        game.category.includes(selectedCategory)
-      );
-
+  // Filter games by category
+  const filteredGames =
+    selectedCategory === "All"
+      ? importedGames
+      : importedGames.filter((game) =>
+          game.category.includes(selectedCategory)
+        );
 
   const slides = [
     {
       id: 1,
       src: "/assets/images/simulation/Bully.png", // Path to your PNG images
-      alt: 'Bully scholarship edition Games',
+      alt: "Bully scholarship edition Games",
     },
     {
       id: 2,
       src: "/assets/images/Sports/fifalg.png",
-      alt: 'Fifa 24 image',
+      alt: "Fifa 24 image",
     },
     {
       id: 3,
       src: "/assets/images/simulation/Peaklg.png",
-      alt: 'Peak image',
+      alt: "Peak image",
     },
     {
       id: 4,
       src: "/assets/images/strategy/XCOM2lg.png",
-      alt: 'xcom2 strategy game',
+      alt: "xcom2 strategy game",
     },
     {
       id: 5,
       src: "/assets/images/Adventure/littlenightmarelg.png",
-      alt: 'littlenightmare image',
+      alt: "littlenightmare image",
     },
   ];
-
 
   return (
     <div className="pb-4">
@@ -80,12 +79,12 @@ export default function Home() {
             <Recentlyplayed />
           </div>
           <div className="mt-8">
-          <Filters
-            selectedCategory={selectedCategory}
-            onCategoryChange={setSelectedCategory}
-          />
-          <Gamegrid games={filteredGames} />
-        </div>
+            <Filters
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+            />
+            <Gamegrid games={filteredGames} />
+          </div>
         </main>
       </div>
     </div>

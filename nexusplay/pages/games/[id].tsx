@@ -1,19 +1,14 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { games } from '@/constants';
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
 import { FaChevronLeft, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { AiFillStar } from 'react-icons/ai';
 import { FaRegStar } from 'react-icons/fa';
 import { HiOutlineInbox } from "react-icons/hi2";
 import { IoNotificationsOutline } from "react-icons/io5";
 
-
-export default function GameDetailPage() {
-  const router = useRouter();
-  const { id } = router.query;
-
+export default function GameDetailPage({ game }) {
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }).map((_, i) => (
       i < Math.floor(rating) ? 
@@ -21,9 +16,6 @@ export default function GameDetailPage() {
         <FaRegStar key={i} className="text-yellow-400" />
     ));
   };
-
-  // Find the specific game by ID
-  const game = games.find((game) => game.id === id);
 
   if (!game) {
     return <div className="p-8 text-center">Game not found</div>;
@@ -207,7 +199,6 @@ export default function GameDetailPage() {
     </div>
   );
 }
-
 
 // Pre-generate all game pages at build time
 export async function getStaticPaths() {

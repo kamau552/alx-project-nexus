@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Footer from './Footer';
-import Sidebar from './Sidebar';
+import Footer from '@/components/layout/Footer';
+import Sidebar from '@/components/layout/Sidebar';
 
 
 interface LayoutProps {
