@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { games as importedGames } from "@/constants";
 import Searchbar from "@/components/common/searchbar";
 import Filters from "../components/common/filters";
-import Gamegrid from "../components/common/gamegrid";
+import Gamegrid from "@/components/common/gamegrid";
 
 export default function Categories() {
   const [searchValue, setSearchValue] = React.useState("");

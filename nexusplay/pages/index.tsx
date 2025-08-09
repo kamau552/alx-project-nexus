@@ -6,7 +6,7 @@ import { HiOutlineInbox } from "react-icons/hi2";
 import { IoNotificationsOutline } from "react-icons/io5";
 import Carousel from "@/components/common/carousel";
 import Recentlyplayed from "@/components/common/recentlyplayed";
-import Gamegrid from "@/components/common/gamegrid";
+import Gamegrid from "@/components/common/Gamegrid";
 import Filters from "@/components/common/filters";
 
 export default function Home() {
