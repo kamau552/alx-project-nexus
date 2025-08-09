@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { games } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,19 +9,39 @@ import { FaRegStar } from 'react-icons/fa';
 import { HiOutlineInbox } from "react-icons/hi2";
 import { IoNotificationsOutline } from "react-icons/io5";
 
-export default function GameDetailPage({ game }) {
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }).map((_, i) => (
-      i < Math.floor(rating) ? 
-        <AiFillStar key={i} className="text-yellow-400" /> : 
-        <FaRegStar key={i} className="text-yellow-400" />
-    ));
+export async function getStaticPaths() {
+  const paths = games.map((game) => ({
+    params: { id: game.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }: { params: { id: string } }) {
+  const game = games.find((g) => g.id.toString() === params.id);
+
+  return {
+    props: {
+      game: game || null,
+    },
   };
+}
+
+export default function GameDetailPage({ game }: { game: any }) {
+  const router = useRouter();
 
   if (!game) {
     return <div className="p-8 text-center">Game not found</div>;
   }
-   
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }).map((_, i) =>
+      i < Math.floor(rating) ?
+        <AiFillStar key={i} className="text-yellow-400" /> :
+        <FaRegStar key={i} className="text-yellow-400" />
+    );
+  };
+
   return (
     <div className="p-2">
       {/* Top Nav */}
@@ -28,7 +49,6 @@ export default function GameDetailPage({ game }) {
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 bg-transparent"
       >
-        {/* Back Button */}
         <Link href="/">
           <button
             type="button"
@@ -39,7 +59,6 @@ export default function GameDetailPage({ game }) {
           </button>
         </Link>
 
-        {/* Icons Container */}
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -71,9 +90,8 @@ export default function GameDetailPage({ game }) {
             />
           </div>
 
-          {/* Game Name and Rating */}
           <div className="pt-10">
-            <div className="absolute bottom-0 left-0 right-0 pt-4 text-Black">
+            <div className="absolute bottom-0 left-0 right-0 pt-4 text-black">
               <h1 className="text-4xl font-bold mb-2">{game.title}</h1>
               <div className="flex items-center">
                 <div className="flex mr-4">{renderStars(game.rating)}</div>
@@ -83,23 +101,21 @@ export default function GameDetailPage({ game }) {
               </div>
             </div>
           </div>
-          <div className="">
-            {/* Genre*/}
-            <div className="flex justify-end md:col-span-2">
-              {/* Genre Tags */}
-              <div className="flex flex-wrap gap-2 ">
-                {game.category.map((genre, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-gray-300 rounded-full text-sm"
-                  >
-                    {genre}
-                  </span>
-                ))}
-              </div>
+
+          <div className="flex justify-end md:col-span-2">
+            <div className="flex flex-wrap gap-2">
+              {game.category.map((genre: string, index: number) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-gray-300 rounded-full text-sm"
+                >
+                  {genre}
+                </span>
+              ))}
             </div>
           </div>
         </div>
+
         {/* Purchase Section */}
         <div className="bg-transparent p-6 rounded-lg shadow-md">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -140,14 +156,13 @@ export default function GameDetailPage({ game }) {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-2">
-        {/* Description */}
         <div className="mt-2 mb-8 lg:mt-2">
           <p className="text-black leading-relaxed">{game.description}</p>
         </div>
       </div>
+
       {/* Right Column - Details */}
       <div className="space-y-6">
-        {/* Release Info */}
         <div className="bg-gray-100 p-6 rounded-lg">
           <h2 className="text-xl font-bold mb-4">Release Info</h2>
           <div className="space-y-3">
@@ -166,11 +181,10 @@ export default function GameDetailPage({ game }) {
           </div>
         </div>
 
-        {/* Platforms */}
         <div className="bg-gray-100 p-6 rounded-lg">
           <h2 className="text-xl font-bold mb-4">Platforms</h2>
           <ul className="space-y-2">
-            {game.platforms.map((platform, index) => (
+            {game.platforms.map((platform: string, index: number) => (
               <li key={index} className="flex items-center">
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                 {platform}
@@ -179,7 +193,6 @@ export default function GameDetailPage({ game }) {
           </ul>
         </div>
 
-        {/* System Requirements */}
         <div className="bg-gray-100 p-6 rounded-lg">
           <h2 className="text-xl font-bold mb-4">System Requirements</h2>
           <div className="space-y-3">
@@ -198,21 +211,4 @@ export default function GameDetailPage({ game }) {
       </div>
     </div>
   );
-}
-
-// Pre-generate all game pages at build time
-export async function getStaticPaths() {
-  return {
-    paths: games.map((game) => ({
-      params: { id: game.id }
-    })),
-    fallback: false
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const game = games.find((g) => g.id === params.id) || null;
-  return {
-    props: { game }
-  };
 }
