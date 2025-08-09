@@ -27,8 +27,8 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function GameDetailPage({ game }: { game: any }) {
-  const router = useRouter();
 
   if (!game) {
     return <div className="p-8 text-center">Game not found</div>;
@@ -202,7 +202,7 @@ export default function GameDetailPage({ game }: { game: any }) {
               Object.entries(game.systemRequirements).map(([key, value]) => (
                 <div key={key} className="flex">
                   <span className="text-gray-400 capitalize w-40">{key}:</span>
-                  <span>{value}</span>
+                  <span>{value as string}</span>
                 </div>
               ))
             )}
