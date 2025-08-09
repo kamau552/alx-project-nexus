@@ -26,6 +26,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
   };
 }
 
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function GameDetailPage({ game }: { game: any }) {
 
