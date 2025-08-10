@@ -1,89 +1,107 @@
-# ALX Project Nexus – Frontend Engineering Journey & Capstone
+# NexusPlay – ALX Project Nexus Capstone
 
-Welcome to my **ALX ProDev Frontend Engineering** documentation hub.
+## Overview
+NexusPlay is my ALX Project Nexus capstone — a dynamic, responsive e-commerce platform for discovering and purchasing video games across PC, console, and mobile.
 
-This repository (`alx-project-nexus`) serves two purposes:
+The project is inspired by my lifelong passion for gaming, with its layout influenced by platforms like Steam and Xbox. Over the years, I’ve explored countless titles on PC and mobile, and NexusPlay reflects my dream of building a dedicated, beautifully designed platform for gamers.
 
-- Reflect on the major concepts and tools I’ve learned throughout the program.
-- Document the ongoing development of my capstone project — **NexusPlay**, a dynamic video game e-commerce platform.
+This repository documents:
 
----
-
-## About the ALX ProDev Frontend Engineering Program
-
-The ALX ProDev Frontend Program is a hands-on, industry-focused curriculum that equips learners with practical skills to build production-grade frontend applications.
-
-Over the span of the program, I’ve worked with cutting-edge tools, tackled real-world problems, and collaborated with backend developers to simulate an actual developer environment.
+- My learning journey through the ALX ProDev Frontend Engineering program.
+- The design and development process of NexusPlay from concept to deployment.
 
 ---
 
-## Major Learnings
-
-### Key Technologies Covered
-
-| Area                  | Tools & Technologies                       |
-|-----------------------|---------------------------------------------|
-| Web Development       | React, Next.js, HTML, CSS                   |
-| Styling               | Tailwind CSS, SCSS                         |
-| Mobile Development    | React Native, Expo                         |
-| State Management      | Context API, Redux Toolkit (planned)       |
-| Programming Language  | TypeScript                                 |
-| APIs & Integration    | RESTful APIs, Axios, Fetch API              |
-| System Design         | API design, modular folder structures       |
-| Deployment & Tools    | Git, GitHub, Vercel, Netlify, VS Code       |
-| PWA Concepts          | Service Workers (studied, not implemented) |
+## Project Goals
+- Build a production-grade web application using modern frontend technologies.
+- Create a visually appealing, responsive UI inspired by platforms like Steam, Xbox Store, and Epic Games Store.
+- Deliver smooth browsing, searching, and wishlist/cart functionality.
 
 ---
 
-### Core Frontend Concepts Mastered
+## Tech Stack
 
-- Component-driven architecture (React, React Native)
-- Next.js routing, layouts, and API integration
-- Tailwind CSS utility-first responsive design
-- Strong typing and scalability using TypeScript
-- System design thinking (how to break down large features)
-- Collaborative workflows using Git, PRs, and version control
-
----
-
-### Challenges Faced & Solutions
-
----
-
-### Best Practices Adopted
-
+| Area                 | Tools & Technologies                              |
+|----------------------|----------------------------------------------------|
+| Web Development      | React, Next.js (v13+ with App Router)              |
+| Styling              | Tailwind CSS, SCSS                                 |
+| State Management     | Context API (Redux Toolkit planned)                |
+| Programming Language | TypeScript                                         |
+| APIs & Integration   | RESTful APIs (planned), Axios, Fetch API           |
+| Deployment           | Vercel                                             |
+| Tools                | Node.js v18+, npm/yarn, Git, GitHub, VS Code       |
 
 ---
 
-## Capstone Project: NexusPlay
-
-**NexusPlay** is my capstone project — a responsive e-commerce catalog for discovering and purchasing video games across PC, console, and mobile.
-
-
-### Features:
-
-- Browse/filter/sort by platform and price
-- Region-based availability (based on user's location)
-- Device compatibility & system requirements
-- Wishlist and email notifications for unreleased games
-- Mobile support with download links
-- Email confirmation on booking & checkout
+## Current Features
+- Homepage with featured and trending games.  
+- Sidebar navigation by genre and platform.  
+- Search functionality for games.  
+- Game details page with descriptions and specifications.  
+- Responsive design for desktop and mobile.  
+- Dark theme UI (in progress).
 
 ---
 
-## Collaboration & Community
+## Planned Features
+The following features are planned but not yet complete:
 
-- Worked with ProDev Backend learners to simulate API interactions
-
+- API integration for real-time game data.  
+- Fully functional dark mode toggle.  
+- Complete cart and wishlist logic (add/remove, persist state).  
+- User authentication (login/signup pages).  
+- Checkout flow with confirmation emails.  
+- Improved mobile navigation and animations.
 
 ---
 
-## Tools & Dev Setup
+## Program Context
+The ALX ProDev Frontend Engineering Program is a hands-on, industry-focused curriculum that equips learners with the skills to build real-world applications.
 
-```bash
-- Node.js v18+
+Key learnings include:
+
+- Component-driven architecture (React, React Native).  
+- Next.js routing, layouts, and API handling.  
+- Utility-first responsive design with Tailwind CSS.  
+- Strong typing with TypeScript.  
+- Git workflows, PRs, and collaboration tools.
+
+---
+
+## Collaboration Note
+This project was originally intended as a collaborative effort. My assigned partner was unable to contribute, so I completed the work independently.
+
+---
+
+## Future additions
+- Fully integrate APIs for live game data.
+- Finalize dark mode.
+- Complete cart/wishlist features.
+- Add user authentication and checkout.
+- Expand mobile optimizations and animations.
+
+## Deployment
+- Deployed via Vercel
+- Live site: https://alx-project-nexus-ph0jqyifp-kamau552s-projects.vercel.app/
+
+## Getting Started
+
+### Prerequisites
+- Node.js v18+  
 - npm or yarn
-- Next.js (v13+ with App Router)
-- Tailwind CSS
-- Visual Studio Code
-- GitHub for version control
+
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/your-username/alx-project-nexus.git
+
+# Navigate to project folder
+cd alx-project-nexus
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start development server
+npm run dev
